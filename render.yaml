@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tiktok-temple-live
+    env: node
+    plan: free
+    buildCommand: bun install && uv venv .venv && uv pip install zerotts pillow
+    startCommand: bun start
+    envVars:
+      - key: PORT
+        value: 3000

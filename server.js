@@ -120,8 +120,8 @@ class ZeroTTSManager {
 
   resolvePythonBin() {
     const venvPy = path.join(__dirname, '.venv', 'bin', 'python');
-    if (fs.existsSync(venvPy)) return venvPy;
-    return 'python3';
+  if (fs.existsSync(venvPy)) return venvPy;
+  return 'python3';
   }
 
   startWorker() {
