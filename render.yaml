@@ -3,8 +3,10 @@ services:
     name: tiktok-temple-live
     env: node
     plan: free
-    buildCommand: bun install && uv venv .venv && uv pip install zerotts pillow
+    buildCommand: bun install && python3 -m venv .venv && .venv/bin/pip install zerotts pillow
     startCommand: bun start
     envVars:
       - key: PORT
         value: 3000
+      - key: POETRY_VERSION
+        value: "none"
